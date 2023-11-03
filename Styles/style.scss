@@ -14,6 +14,7 @@ body {
     padding: 0;
     background-color: white;
     box-sizing: border-box;
+    letter-spacing: 0.7px;
 }
 .NavbarHeroSection{
     background-image: url('../images/background.jpg');
@@ -28,8 +29,11 @@ body {
     background-color: #9c9c9c3e;
     color: #ffffff;
     text-align: center;
-    width: 150px;
-    height: 100px;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
         width: 150px;
         height: 100px;
@@ -65,9 +69,13 @@ nav {
 
 #home{
     height: 80vh;
-    background-color: rgba(0, 0, 0, 0.317);
+    background-color: rgba(0, 0, 0, 0.417);
+    display: flex;
+align-items: center    
     
-    
+}
+#homeCont{
+    margin-top: -100px;
 }
 
 .button1 {
@@ -80,40 +88,84 @@ nav {
 
 // below Hero--------------------------------------
 
+#aboutUS{
+    background-color: rgba(255, 255, 255, 0.233) !important; 
+  
+}
 
-.hero-section {
-    position: relative;
-    height: 100vh; 
-    background-color: #ffffff34; 
-    overflow: hidden;
-    margin: 0px 0px 0px 0px;
+// .hero-section {
+//     position: relative;
+//     height: auto; 
+//     background-color: #ffffff34; 
+//     overflow: hidden;
+//     margin: 0px 0px 0px 0px;
+//     display: flex;
+//     justify-content: space-between;
+//     position: relative;
+//     width: 100%;
+//   }
+  @media screen and (max-width:756px){
+    
+    #aboutUS{
+        background-color: rgb(216, 19, 19) !important; 
+    }
+    .hero-section {
+      }
+      .mt-5{
+        text-align: justify;
+
+      }
+      #cupImg{
+        z-index: -2999999999;
+        margin: 0px auto;
+        min-width: 400px;
+        margin-top: 20%;
+        right: 20px;
+        }
+        #home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #homeCont{
+    margin-top: 0px;
+
+        }
   }
   
-  .hero-section {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
 
-.image-container {
-  position: relative;
-  width: 100%; 
-}
 
-.image-container img {
-  width: 100%;
-  height: auto;
-  position: absolute;
-}
+// .image-container {
+//   width: 100%; 
+//   aspect-ratio: 1/1;
+// // position: absolute;
+//     float: right;
+//     border: 2px solid black;
+// }
+
+// .image-container img {
+// //   width: 100%;
+// //   height: auto;
+// }
+
+// #cupImg{
+// //     width: 600px;
+// //     height: 300px;
+// //     shape-outside: url('../images/CoffeCup.png');
+// //   shape-image-threshold: 0.5;
+// //   float: right;
+// }
 
 .top-left {
   align-self: flex-start;
 }
 
 .top-right {
-right: 0;
+right: 0%;
+}
+
+.mt-5 p{
+    // text-align: justify;
 }
 
 
