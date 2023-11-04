@@ -12,6 +12,292 @@
 </head>
 
 <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    box-sizing: border-box;
+    letter-spacing: 0.7px;
+  }
+  
+  .NavbarHeroSection {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -11;
+  }
+  
+  #header {
+    background-color: rgba(156, 156, 156, 0.2431372549);
+    color: #ffffff;
+    text-align: center;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #header img {
+    width: 150px;
+    height: 100px;
+  }
+  
+  nav {
+    background-color: rgba(0, 0, 0, 0.507);
+    text-align: center;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    width: 100px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #ffffff !important;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+  
+  #home {
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.417);
+    display: flex;
+    align-items: center;
+  }
+  
+  #homeCont {
+    margin-top: -100px;
+  }
+  
+  .button1 {
+    background-color: #e5b000;
+    color: #fff;
+    border: 2px solid #e5b000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .button1:hover {
+    background-color: #ca9400;
+    color: #ffffff;
+  }
+  
+  .button2 {
+    background-color: #ccc;
+    color: #333;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .button2:hover {
+    background-color: #999;
+    color: #333;
+  }
+  
+  #aboutUS {
+    background-color: rgba(255, 255, 255, 0.233);
+  }
+  
+  @media screen and (max-width: 756px) {
+    #aboutUS {
+      background-color: rgba(255, 255, 255, 0.533);
+    }
+    .mt-5 {
+      text-align: justify;
+    }
+    #cupImg {
+      position: absolute;
+      z-index: -2;
+      offset: 1;
+      margin: 0px auto;
+      min-width: 400px;
+      margin-top: 20%;
+      right: 20px;
+    }
+    #home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #homeCont {
+      margin-top: 0px;
+    }
+  }
+  .top-left {
+    align-self: flex-start;
+  }
+  
+  .top-right {
+    right: 0%;
+  }
+  
+  .team-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .team-card {
+    transition: transform 0.2s;
+    height: 100%;
+  }
+  
+  .team-card img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  .team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-images img {
+    flex: 1;
+    max-width: 30%;
+    height: auto;
+    margin: 10px;
+  }
+  
+  #home .home-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #home .home-images img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .ContactSection > h2 {
+    text-align: center;
+  }
+  
+  .ContactSection > p {
+    text-align: center;
+  }
+  
+  .contact-form-container {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 50px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-title {
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    font-weight: 600;
+    color: #555;
+  }
+  .form-group input[type=text],
+  .form-group input[type=email],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  
+  .site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+  }
+  
+  .site-footer h5 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 15px;
+  }
+  
+  .site-footer address {
+    color: #cccccc;
+    font-size: 15px;
+    margin: 15px 0;
+  }
+  
+  .site-footer i {
+    color: #cccccc;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .site-footer ul.list-unstyled li {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  
+  .site-footer hr {
+    border-color: #bbb;
+    opacity: 0.2;
+  }
+  
+  .site-footer ul.social-buttons {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .site-footer ul.social-buttons li {
+    display: inline;
+  }
+  
+  .site-footer ul.social-buttons a {
+    background-color: #444;
+    border: 2px solid #444;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    text-decoration: none;
+  }
+  
+  .site-footer p {
+    font-size: 16px;
+  }
 #cupImg{
     width: 45%;
     min-width: 400px;
